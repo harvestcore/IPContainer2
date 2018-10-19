@@ -2,7 +2,8 @@ urllib3==1.23
 Flask==1.0.2
 Flask-Jsonpify==1.5.0
 Flask-RESTful==0.3.6
-Flask-SQLAlchemy==2.3.2
 pytest==3.8.1
 simplejson==3.13.2
 mysql-connector-python==8.0.12
+gunicorn==19.9.0
+flask_sqlalchemy==2.1

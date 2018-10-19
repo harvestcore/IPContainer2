@@ -6,7 +6,7 @@ with open('./src/config.json') as f:
     key = json.load(f)
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = key["mysql"]
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['MYSQL_KEY']
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
