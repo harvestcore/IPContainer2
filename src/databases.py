@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-import urllib, json
+import urllib, json, os
 
 with open('./src/config.json') as f:
     key = json.load(f)
