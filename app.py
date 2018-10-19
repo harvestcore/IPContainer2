@@ -8,6 +8,10 @@ app = Flask(__name__)
 def hello():
     return "who dis"
 
+@app.route("/status")
+def status():
+    return jsonify(noofusers=IPContainer.getNumberOfUsers(), noofnetworks=IPContainer.getNumberOfNetworks())
+
 @app.route("/addUser/<user>")
 def addUser(user):
     return jsonify(success=IPContainer.addUser(str(user)))
