@@ -2,8 +2,8 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import urllib, json, os
 
-with open('./src/config.json') as f:
-    key = json.load(f)
+#with open('./src/config.json') as f:
+#    key = json.load(f)
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['MYSQL_KEY']
